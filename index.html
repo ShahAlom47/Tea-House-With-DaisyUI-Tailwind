@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font / -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <title>Tea House</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 'Manrope', sans-serif;
+            color: black;
+        }
+
+        .max-width {
+            max-width: 1440px;
+            margin: 0px auto;
+
+        }
+
+        .sec-width {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .primary-btn {
+            border-radius: 10px;
+            background: var(--Linear, linear-gradient(270deg, #F00 0%, #FF8938 100%));
+            border: none;
+            color: #FFF;
+            text-align: center;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Manrope;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .primary-btn:hover {
+
+            background: var(--Linear, linear-gradient(270deg, rgb(157, 14, 14) 0%, #be6b34 100%));
+        }
+
+        .sec-heading {
+            color: var(--Dark-01, #1C1C1C);
+            text-align: center;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Manrope;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px white;
+        }
+
+        .sec-para {
+            color: var(--Dark-03, #777);
+            text-align: center;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            margin-bottom: 50px;
+
+            /* 175% */
+        }
+
+        .bg-card {
+            border-radius: 10px;
+            background: linear-gradient(180deg, #F4F4F4 0%, rgba(244, 244, 244, 0.00) 100%);
+        }
+
+        .box-1 {
+            border-radius: 10px;
+            opacity: 0.1;
+            background: var(--Linear, linear-gradient(270deg, #F00 0%, #FF8938 100%));
+        }
+
+        .box-2 {
+            border-radius: 10px;
+            background: rgba(230, 166, 35, 0.10);
+        }
+
+        .box-3 {
+            border-radius: 10px;
+            background: linear-gradient(90deg, #D9D9D9 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
+
+        .box-4 {
+
+            background: lightgray -729.223px 0px / 640.426% 251.989% no-repeat;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body class="max-width">
+
+    <header class="w-12/12  bg-white py-32">
+
+        <label class="flex cursor-pointer gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5" />
+                <path
+                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            </svg>
+            <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </label>
+
+        <div class="  bg-white">
+            <div class="hero-content flex-col-reverse lg:flex-row-reverse justify-between w-10/12 m-auto ">
+                <div class="max-w-sm  ">
+                    <img src="images/banner.png" class="w-12/12  " />
+                    <div
+                        class="flex  items-center gap-3  p-4 relative bottom-16 lg:right-8   bg-white rounded-xl    w-8/12">
+                        <div class="rating rating-md ">
+                            <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold">5.00</h1>
+                            <p class="font-light text-sm lg:text-base">Trust Pilot Ratings</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="lg:w-6/12">
+                    <h1 class="text-7xl font-medium  leading-tight text-black">It's good <br>
+                        tea time at The
+                        <br> Tea House
+                    </h1>
+                    <p class="py-6">Tea and Botanical Solutions Supplier Give Optimum Satisfaction <br>To Your Taste
+                        Buds.</p>
+                    <button class="btn btn-primary primary-btn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="featured-product sec-width    ">
+
+            <h1 class="sec-heading ">Our Featured Products</h1>
+            <p class="sec-para  w-8/12 m-auto  ">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or randomised words which don't look even slightly
+                believable.
+            </p>
+            <div class="featured-card-cotainer py-12 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+                <div class="card  bg-card shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/tea-1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title font-bold">Milk Tea</h2>
+                        <p class="text-base font-medium">Creamer could be replaced by fresh milk</p>
+
+                    </div>
+
+                </div>
+                <div class="card  bg-card shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/tea-2.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title font-bold">Black Tea</h2>
+                        <p class="text-base font-medium">Creamer could be replaced by fresh milk</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card  bg-card shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/tea-3.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title font-bold">Lemon Tea</h2>
+                        <p class="text-base font-medium">Creamer could be replaced by fresh milk</p>
+
+                    </div>
+                </div>
+
+
+                <div class="card  bg-card shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/tea-4.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title font-bold">Green Tea</h2>
+                        <p class="text-base font-medium">Creamer could be replaced by fresh milk</p>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+
+        <section class="sec-width  flex gap-10 flex-col-reverse lg:flex-row  bg-white:">
+
+            <div class="grid-box w-12/12  lg:w-6/12 grid gap-5 grid-cols-12 grid-rows-12 ">
+
+                <div class=" box-1 col-span-6 row-span-4 row-start-1 col-start-1"></div>
+                <div class="box-2 col-span-6 col-start-7 row-span-8 row-start-1   flex justify-center items-center ">
+                    <img class="w-12/12" src="images/fresh-1.png" alt="">
+                </div>
+                <div class="box-3 col-span-6  col-start-1 row-span-8 row-start-5   flex justify-center items-center">
+                    <img class="w-12/12" src="images/fresh-2.png" alt="">
+                </div>
+                <div class=" box-4 col-span-6  col-start-7 row-span-4 row-start-9 "><img src="" alt=""></div>
+            </div>
+            <div class="contant-box w-12/12 lg:w-6/12">
+                <h1 class="sec-heading text-left">Great Tea, Freshly <br>Presented</h1>
+                <p class="sec-para text-left">The meaning of gong cha is chanese is to provide the best tea to emperor
+                    from all possessions . It represents the highest quality and self expectation. Establishing in 2006,
+                    Gong cha had been deeply appreciated by its custoers because of good words of mouth and unique
+                    customized service orginated from Taiwan.</p>
+
+                <h3 class="font-bold text-xl mb-3">Unique Taste</h3>
+                <p class="sec-para text-left mb-5 pb-0">A Unique and different style from other teapots gives a
+                    luxurious and minimalist impression</p>
+                <h3 class="font-bold text-xl mb-3">Premium Quality</h3>
+                <p class="sec-para text-left mb-5 pb-0">Premium Quality that makes tea more elegant and more durable
+                    when you use it.</p>
+            </div>
+
+        </section>
+        <!-- client section -->
+        <section
+            class="sec-width bg-gradient-to-r from-[#FF8938] to-[#F00] ...  py-20 px-16  flex gap-4 flex-col lg:flex-row items-center">
+            <div class="client-contant lg:w-6/12">
+                <h1 class="text-4xl font-extrabold text-gray-100">Meet Our Super <br> Clients</h1>
+                <p class="sect-pra  text-left  text-gray-100 my-7 "> There are many variations of passages of Lorem
+                    Ipsum available, but the majority
+                    have suffered alteration in some form, by injected humour, or randomised words which don't look even
+                    slightly believable. </p>
+                <button
+                    class=" bg-white  text-orange-500 py-2 px-6 font-bold text-lg rounded-lg my-8 hover:bg-slate-200 ">Show
+                    All</button>
+            </div>
+
+            <div class="client-box  lg:w-6/12 flex gap-14 flex-col  lg:items-end  relative">
+
+                <!-- card  -->
+                <div class="p-9   bg-white rounded-lg   w-10/12 relative z-10 opacity-25">
+                    <img class="absolute  -left-6 -top-6 border-4 border-white p-0 rounded-full "
+                        src="images/client.png" alt="">
+                    <p class=" text-[#777] text-left pb-5 ">We are providing the best and suitable home insurance
+                        services for the people who are interested
+                        to treatment</p>
+                    <h2 class="font-bold">Ilham Yuda</h2>
+                    <h3>Businessman</h3>
+                    <div class="flex justify-end "><img src="images/circles.png" alt=""></div>
+                </div>
+                <!-- card 2 -->
+                <div class="p-9   bg-white rounded-lg   w-10/12 absolute left-6 lg:-left-2 top-1/4 z-20">
+                    <img class="absolute  -left-6 -top-6 border-4 border-white p-0 rounded-full "
+                        src="images/client.png" alt="">
+                    <p class=" text-[#777] text-left pb-5 ">We are providing the best and suitable home insurance
+                        services for the people who are interested
+                        to treatment</p>
+                    <h2 class="font-bold">Ilham Yuda</h2>
+                    <h3>Businessman</h3>
+                    <div class="flex justify-end "><img src="images/circles.png" alt=""></div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="p-9   bg-white rounded-lg   w-10/12 relative z-10 opacity-25">
+                    <img class="absolute  -left-6 -top-6 border-4 border-white p-0 rounded-full "
+                        src="images/client.png" alt="">
+                    <p class=" text-[#777] text-left pb-5 ">We are providing the best and suitable home insurance
+                        services for the people who are interested
+                        to treatment</p>
+                    <h2 class="font-bold">Ilham Yuda</h2>
+                    <h3>Businessman</h3>
+                    <div class="flex justify-end "><img src="images/circles.png" alt=""></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="sec-width">
+
+            <h1 class="sec-heading">News & Events</h1>
+            <p class="sec-para">There are many variations of passages of Lorem Ipsum available, but the majority have
+                suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
+                believable. </p>
+            <div class="event-card-cotainer flex gap-6  flex-col  lg:flex-row ">
+
+                <!-- card-1  -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img src="images/news-1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start text-left">
+                        <p>Feb 05, 2027</p>
+                        <h2 class="card-title">Collecting 8 points for discount</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available.</p>
+                        <div class="card-actions">
+                            <button class="font-bold hover:underline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-2  -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img src="images/news-1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start text-left">
+                        <p>Feb 05, 2027</p>
+                        <h2 class="card-title">Collecting 8 points for discount</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available.</p>
+                        <div class="card-actions">
+                            <button class="font-bold hover:underline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img src="images/news-1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start text-left">
+                        <p>Feb 05, 2027</p>
+                        <h2 class="card-title">Collecting 8 points for discount</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available.</p>
+                        <div class="card-actions">
+                            <button class="font-bold hover:underline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="max-width my-28  bg-pink-200 py-10 ">
+
+        <div class="footer-section  sec-width ">
+            <div class="f-upper-sec flex gap-9 flex-col lg:flex-row items-center lg:justify-between pr-8 ">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="65" viewBox="0 0 62 65" fill="none">
+                        <g clip-path="url(#clip0_60_141)">
+                            <path
+                                d="M55.3551 27.8521L7.23615 34.7869C5.15259 35.0932 3.04087 34.397 1.63306 32.8652C0.619437 31.7512 0 30.2751 0 28.6598C0 25.3178 2.64668 22.5884 5.99727 22.4213C6.22252 22.4213 6.41962 22.3935 6.64487 22.3656L54.7639 15.4588C56.8474 15.1524 58.9591 15.8487 60.3669 17.3804C61.3806 18.4944 62 19.9705 62 21.5858C62 24.9279 59.3533 27.6572 56.0027 27.8243C55.8056 27.7964 55.5804 27.8243 55.3551 27.8521Z"
+                                fill="#1C1C1C" />
+                            <path
+                                d="M50.3433 44.2838L11.6567 49.8539C8.16529 49.8539 5.34967 47.0689 5.34967 43.6154C5.34967 40.162 8.16529 37.3769 11.6567 37.3769L50.3433 31.8069C53.8347 31.8069 56.6503 34.5919 56.6503 38.0454C56.6503 41.4709 53.8347 44.2838 50.3433 44.2838Z"
+                                fill="#1C1C1C" />
+                            <path
+                                d="M40.1226 61.3561L21.8492 64.1411C18.3579 64.1411 15.5422 61.3561 15.5422 57.9026C15.5422 54.4492 18.3579 51.6642 21.8492 51.6642L40.1226 48.8792C43.614 48.8792 46.4296 51.6642 46.4296 55.1176C46.4578 58.5711 43.614 61.3561 40.1226 61.3561Z"
+                                fill="#1C1C1C" />
+                            <path
+                                d="M37.307 14.7625V6.37958C37.307 2.92614 34.4914 0.141113 31 0.141113C27.5086 0.141113 24.693 2.92614 24.693 6.37958V16.5728L37.307 14.7625Z"
+                                fill="#1C1C1C" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_60_141">
+                                <rect width="62" height="64" fill="white" transform="translate(0 0.141113)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="flex gap-7 flex-col md:flex-row lg:flex-row items-center">
+                    <p class="text-xl">Ready to get strated?</p>
+                    <button class="btn btn-primary primary-btn">Get Started</button>
+
+                </div>
+
+            </div>
+
+            <div class="f-md-sec  ">
+
+                <div class="footer py-10 my-14 text-base-content justify-between">
+
+                    <nav>
+                        <header class="footer-title text-xl font-bold text-black">Quick Links</header> 
+                        <a class="link link-hover">Home</a>
+                        <a class="link link-hover">About Us</a>
+                        <a class="link link-hover">Insurance</a>
+                        <a class="link link-hover">Privacy Policy</a>
+                      </nav> 
+
+                    <nav>
+                      <header class="footer-title   text-xl font-bold text-black ">Services</header> 
+                      <a class="link link-hover">Branding</a>
+                      <a class="link link-hover">Design</a>
+                      <a class="link link-hover">Marketing</a>
+                      <a class="link link-hover">Advertisement</a>
+                    </nav> 
+                    <nav>
+                      <header class="footer-title   text-xl font-bold text-black ">Help</header> 
+                      <a class="link link-hover">About us</a>
+                      <a class="link link-hover">Contact</a>
+                      <a class="link link-hover">Jobs</a>
+                      <a class="link link-hover">Press kit</a>
+                    </nav> 
+                    <nav>
+                      <header class="footer-title  text-xl font-bold text-black ">Social</header> 
+
+                       <div>
+                        <h1 class="font-bold text-3xl">Subscribe to our newsletter</h1>
+                        <form action="" class="my-8">
+                            <input type="email" name="" id="" class="bg-transparent border-b-4 border-gray-500 placeholder:text-lg p-3 pr-12" placeholder="Enter your email..">
+                            <button class="btn btn-circle primary-btn rounded-full " >❯</button>
+                        </form>
+                       </div>
+
+                      <div class="grid grid-flow-col gap-4">
+                        <a class="cursor-pointer hover:translate-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+                        <a class="cursor-pointer hover:translate-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+                        <a class="cursor-pointer hover:translate-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+                      </div>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="f-lower-sec text-center">
+                <p>© 2027 UIDesign.to - All rights reserved.</p>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>
